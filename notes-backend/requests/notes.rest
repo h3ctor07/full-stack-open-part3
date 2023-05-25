@@ -1,0 +1,31 @@
+GET http://localhost:3001/api/notes HTTP/1.1
+
+###
+GET http://localhost:3001/api/notes/someInvalidId HTTP/1.1
+
+###
+
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlY3RvciIsImlkIjoiNjQ2YmYyMTRlYzU1NzkzZjcyN2Y4ZDg0IiwiaWF0IjoxNjg0ODYyMDQyfQ.7BAXVlKyMRLTwn7kG87phyP340z1G9jke6sdGl5pt_s
+
+{
+  "content": "Fourth note from Hector with token",
+  "important": true
+}
+
+###
+
+DELETE http://localhost:3001/api/notes/6464eec7ecdd64ac1fbe1fea HTTP/1.1
+
+###
+
+PUT http://localhost:3001/api/notes/6464eec7ecdd64ac1fbe1fea HTTP/1.1
+Content-Type: application/json
+
+{
+  "content": "hey",
+  "important": false
+}
+###
